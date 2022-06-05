@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+.corpo-jogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.balao-inicial {
+    border-radius: 1em;
+    color: white;
+    background: rgb(163 114 255);
+    padding: 1em;
+    max-width: 300px;
+    line-height: 1.3;
+}
+
+.balao-inicial-atencao {
+    color: white;
+    font-size: 0.8em;
+    font-weight: bold;
+    display: none;
+}
+
+.balao-inicial-opcoes {
+    display: flex;
+    margin: 1em 0;
+    flex-direction: column;
+}
+
+.balao-inicial-opcoes label {
+    width: 100%;
+}
+
+.balao-inicial-resposta {
+    border-radius: 0.5em;
+    margin: 1em 0 0 0;
+    padding: 1em 0;
+    width: 100%;
+    background-color: rgb(72, 27, 156);
+    border:none;
+    color: white;
+}
+
+.resultado-bloco {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+
+.card {
+    position: relative;
+    width: 200px;
+    height: 350px;
+    margin: 4em 0;
+    perspective: 500px;
+  }
+  
+  .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+  
+  .card:hover .content {
+    transform: rotateY( 180deg ) ;
+    transition: transform 0.5s;
+  }
+  
+  .front,
+  .back {
+    position: absolute;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    text-align: center;
+    backface-visibility: hidden;
+    border-radius: 1em;
+    background: url(../img/verso-carta.gif);
+    box-shadow: 1px 2px 3px 4px #ddd;
+    border: 11px solid #d799e1;
+    width: 200px;
+    height: 350px;
+    margin: 4em 0;
+    transform: translatey(0px);
+   
+  }
+  
+  .back {
+    background: #03446A;
+    color: white;
+    transform: rotateY( 180deg );
+  }
+
+
+
+.resultado-bloco-respostas {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: collumn;
+}

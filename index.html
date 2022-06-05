@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css"/>
+    <script src="./js/app.js" defer></script>
+    <script src="./js/data.js" defer></script>
+    <title>Tarot do Amor</title>
+</head>
+<body>
+<section id="tarot-game" class="corpo-jogo">
+
+    <!-- PRIMEIRA PARTE ---->
+    <form id="escolhasFormulario" class="balao-inicial">
+        Mentalize o que você deseja saber sobre a sua vida amorosa, selecione o tipo de questão e clique no botão baixo para saber a resposta sobre a sua questão.
+    <div class="balao-inicial-opcoes">
+        <div id="atencaoPopUp" class="balao-inicial-atencao">Escolha pelo menos 1 das opções</div>
+        <label>
+            <input type="checkbox" name="pensamento-1" id="pensamentoOpcao"> O que ele(a) pensa de mim
+        </label>
+        <label>
+            <input type="checkbox" name="sim-nao-1" id="simNaoOpcao"/> Sim ou não
+        </label>
+        <label>
+            <input type="checkbox" name="conselho-1" id="conselhoOpcao"/> Conselho
+        </label>
+    </div>
+        <button id="buttonEnviar" class="balao-inicial-resposta">Ver meu resultado</button>
+    </form>
+
+    <!-- SEGUNDA PARTE -->
+    <div class="card" id="tarotCard">
+        <div class="content">
+          <div class="front">
+            Front
+          </div>
+          <div class="back" id="tarotBack">
+            Back!
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <section class="resultado-bloco-respostas" id="blocoResposta">
+    <section class="resultado-bloco">
+
+        
+    
+        <article class="resultado-bloco-textos">
+        <section>
+            <h2>Energia geral da situação</h2>
+            <p id="energiaQuestao">
+                Energia da questâo aqui. Esta parte irá aparecer independente da questão. Então todas as cartas terão esta chave.
+            </p>
+        </section>
+        <section>
+            <h2>O que essa pessoa pensa sobre você:</h2>
+            <p id="oQuePensa">
+                Resposta aqui
+            </p>
+        </section>
+        <section>
+            <h2>Conselho para a sua vida amorosa</h2>
+            <p id="conselhoFinal">
+                O conselho vem aqui o que a consulente deve fazer
+            </p>
+        </section>
+        </article>
+
+        <button id="play-again">Fazer outra pergunta</button>
+
+    </section>
+</section>
+    
+</body>
+</html>
